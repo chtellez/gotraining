@@ -32,6 +32,7 @@ func main() {
 	fmt.Println("lessonName = ", lessonName)
 	fmt.Println("lessonType = ", lessonType)
 
+	//neccsito un cambio
 	word1, word2, _ := "hello", "world", "!"
 	fmt.Println(word1, word2)
 }
