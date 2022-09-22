@@ -20,13 +20,13 @@ func main() {
 	}
 
 	PORT := os.Getenv("PORT")
-	JWT_SECRET := os.Getenv("JWT_SECRET")
-	DATABASE_URL := os.Getenv("DATABASE_URL")
+	JwtSecret := os.Getenv("JWT_SECRET")
+	DatabaseUrl := os.Getenv("DATABASE_URL")
 
 	s, err := server.NewServer(context.Background(), &server.Config{
-		Port: PORT,
-		JWTSecret: JWT_SECRET,
-		DatabaseUrl: DATABASE_URL,
+		Port:        PORT,
+		JWTSecret:   JwtSecret,
+		DatabaseUrl: DatabaseUrl,
 	})
 	if err != nil {
 		log.Fatal(err)
