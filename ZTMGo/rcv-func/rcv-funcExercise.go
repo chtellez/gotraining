@@ -15,28 +15,28 @@ import "fmt"
 
 type Player struct {
 	name                                 string
-	health, maxHealth, energy, maxEnergy int
+	health, maxHealth, energy, maxEnergy uint
 }
 
 //* Implement receiver functions to modify the `Health` and `Energy`
 //  statistics of the Player.
 
-func (p *Player) increaseHealth(health int) {
+func (p *Player) increaseHealth(health uint) {
 	p.health += health
 	p.printStatistics()
 }
 
-func (p *Player) decreaseHealth(health int) {
+func (p *Player) decreaseHealth(health uint) {
 	p.health -= health
 	p.printStatistics()
 }
 
-func (p *Player) increaseEnergy(energy int) {
+func (p *Player) increaseEnergy(energy uint) {
 	p.energy += energy
 	p.printStatistics()
 }
 
-func (p *Player) decreaseEnergy(energy int) {
+func (p *Player) decreaseEnergy(energy uint) {
 	p.energy -= energy
 	p.printStatistics()
 }
