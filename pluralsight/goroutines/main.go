@@ -16,7 +16,7 @@ func main() {
 	cacheCh := make(chan Book)
 	dbCh := make(chan Book)
 
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 10; i++ {
 		id := rnd.Intn(10) + 1
 		wg.Add(2)
 		go func(id int, wg *sync.WaitGroup, m *sync.RWMutex, ch chan<- Book) {
